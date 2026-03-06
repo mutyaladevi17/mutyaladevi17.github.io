@@ -2,338 +2,1159 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Devi M | ML Engineer</title>
+    <title>Devi Mutyala | ML Engineer</title>
+    <meta name="description"
+        content="Portfolio of Devi Mutyala — Machine Learning Engineer & AI Developer building intelligent systems with LLMs, Speech AI, Computer Vision, and Multimodal Deep Learning.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
+    <style>
+        /* ── Reset & Base ───────────────────────────────────── */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
 
-body{
-font-family:'Poppins',sans-serif;
-margin:0;
-background:#0f172a;
-color:#e2e8f0;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0f1e;
+            color: #c9d1e3;
+            line-height: 1.6;
+        }
 
-header{
-text-align:center;
-padding:80px 20px;
-background:linear-gradient(135deg,#1e293b,#0f172a);
-}
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color .2s
+        }
 
-header h1{
-font-size:48px;
-margin-bottom:10px;
-}
+        a:hover {
+            color: #93c5fd
+        }
 
-header p{
-font-size:18px;
-opacity:0.9;
-}
+        /* ── Header ─────────────────────────────────────────── */
+        header {
+            text-align: center;
+            padding: 100px 20px 80px;
+            background: linear-gradient(160deg, #0d1330 0%, #141b38 40%, #0a0f1e 100%);
+            position: relative;
+            overflow: hidden;
+        }
 
-.buttons a{
-text-decoration:none;
-margin:10px;
-}
+        header::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99, 102, 241, .12) 0%, transparent 70%);
+            top: -120px;
+            right: -80px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
 
-.btn{
-padding:12px 22px;
-border-radius:8px;
-background:#3b82f6;
-color:white;
-font-weight:500;
-}
+        header h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            background: linear-gradient(135deg, #e0e7ff, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
 
-nav{
-text-align:center;
-padding:20px;
-background:#020617;
-}
+        header .subtitle {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 6px
+        }
 
-nav a{
-margin:0 15px;
-text-decoration:none;
-color:#cbd5f5;
-font-weight:500;
-}
+        header .tagline {
+            font-size: 15px;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 28px
+        }
 
-section{
-padding:70px 12%;
-}
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap
+        }
 
-h2{
-font-size:32px;
-margin-bottom:20px;
-}
+        .btn {
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: all .25s;
+            display: inline-block;
+        }
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: #fff
+        }
 
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:12px;
-transition:0.3s;
-}
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, .35)
+        }
 
-.card:hover{
-transform:translateY(-6px);
-}
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #334155;
+            color: #cbd5e1
+        }
 
-.tech{
-font-size:14px;
-color:#60a5fa;
-margin-top:10px;
-}
+        .btn-outline:hover {
+            border-color: #6366f1;
+            color: #a5b4fc;
+            transform: translateY(-2px)
+        }
 
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
+        /* ── Nav ────────────────────────────────────────────── */
+        nav {
+            text-align: center;
+            padding: 18px 20px;
+            background: rgba(2, 6, 23, .85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
 
-.skill{
-background:#1e293b;
-padding:8px 14px;
-border-radius:20px;
-}
+        nav a {
+            margin: 0 18px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #94a3b8;
+            transition: color .2s;
+        }
 
-footer{
-text-align:center;
-padding:30px;
-background:#020617;
-margin-top:40px;
-}
+        nav a:hover {
+            color: #e0e7ff
+        }
 
-</style>
+        /* ── Sections ───────────────────────────────────────── */
+        section {
+            padding: 30px 10%
+        }
+
+        h2 {
+            font-size: clamp(26px, 3vw, 34px);
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #e0e7ff;
+        }
+
+        h2 .accent {
+            color: #818cf8
+        }
+
+        .section-sub {
+            color: #64748b;
+            margin-bottom: 40px;
+            font-size: 15px
+        }
+
+        /* ── Project Cards ──────────────────────────────────── */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #111827, #0f172a);
+            border: 1px solid #1e293b;
+            padding: 28px;
+            border-radius: 16px;
+            transition: all .3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #312e81;
+            box-shadow: 0 12px 36px rgba(99, 102, 241, .08);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #e0e7ff;
+            margin-bottom: 10px;
+        }
+
+        .card .desc {
+            font-size: 14px;
+            color: #94a3b8;
+            flex: 1;
+            margin-bottom: 14px;
+            line-height: 1.65;
+        }
+
+        .tech {
+            font-size: 13px;
+            color: #818cf8;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tech span {
+            background: rgba(99, 102, 241, .1);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(99, 102, 241, .15);
+        }
+
+        .card-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .card-actions a {
+            font-size: 14px;
+            font-weight: 500
+        }
+
+        .btn-details {
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            background: linear-gradient(135deg, rgba(99, 102, 241, .15), rgba(79, 70, 229, .1));
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, .25);
+            transition: all .25s;
+        }
+
+        .btn-details:hover {
+            background: linear-gradient(135deg, rgba(99, 102, 241, .28), rgba(79, 70, 229, .2));
+            border-color: #6366f1;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(99, 102, 241, .2);
+        }
+
+        /* ── Skills ─────────────────────────────────────────── */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .skill {
+            background: linear-gradient(145deg, #111827, #0f172a);
+            border: 1px solid #1e293b;
+            padding: 8px 18px;
+            border-radius: 24px;
+            font-size: 14px;
+            color: #94a3b8;
+            transition: all .25s;
+        }
+
+        .skill:hover {
+            border-color: #4f46e5;
+            color: #c7d2fe
+        }
+
+        /* ── About ──────────────────────────────────────────── */
+        #about {
+            padding-bottom: 5px;
+        }
+
+        #about p {
+            max-width: 750px;
+            font-size: 15px;
+            color: #94a3b8;
+            line-height: 1.75;
+        }
+
+        /* ── Contact ────────────────────────────────────────── */
+        #contact p {
+            color: #94a3b8;
+            margin-bottom: 8px
+        }
+
+        /* ── Footer ─────────────────────────────────────────── */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020617;
+            border-top: 1px solid #1e293b;
+            color: #475569;
+            font-size: 13px;
+        }
+
+        /* ── Modal Overlay ──────────────────────────────────── */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 6, 23, .82);
+            backdrop-filter: blur(8px);
+            z-index: 900;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1
+        }
+
+        .modal {
+            background: linear-gradient(160deg, #111827 0%, #0c1120 100%);
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 740px;
+            max-height: 82vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, .55);
+            animation: modalIn .3s ease;
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: translateY(24px) scale(.97)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1)
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 28px 16px;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .modal-header h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #e0e7ff
+        }
+
+        .modal-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid #1e293b;
+            color: #94a3b8;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(239, 68, 68, .12);
+            color: #f87171;
+            border-color: #7f1d1d
+        }
+
+        .modal-body {
+            padding: 24px 28px 28px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #1e293b transparent;
+        }
+
+        .modal-body::-webkit-scrollbar {
+            width: 6px
+        }
+
+        .modal-body::-webkit-scrollbar-track {
+            background: transparent
+        }
+
+        .modal-body::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 3px
+        }
+
+        .modal-body h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #a5b4fc;
+            margin: 20px 0 8px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .modal-body h4:first-child {
+            margin-top: 0
+        }
+
+        .modal-body p,
+        .modal-body li {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.7
+        }
+
+        .modal-body ul {
+            padding-left: 20px;
+            margin-bottom: 12px
+        }
+
+        .modal-body li {
+            margin-bottom: 5px
+        }
+
+        .modal-body li::marker {
+            color: #4f46e5
+        }
+
+        .modal-body .modal-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 10px 0 6px;
+        }
+
+        .modal-body .modal-tech span {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(99, 102, 241, .08);
+            border: 1px solid rgba(99, 102, 241, .15);
+            color: #818cf8;
+        }
+
+        .modal-body .flow-step {
+            background: rgba(99, 102, 241, .05);
+            border-left: 3px solid #4f46e5;
+            padding: 8px 14px;
+            margin: 6px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: #c9d1e3;
+        }
+
+        .modal-body a {
+            color: #818cf8;
+            text-decoration: underline;
+            text-underline-offset: 2px
+        }
+
+        .modal-body a:hover {
+            color: #c7d2fe
+        }
+
+        /* ── Responsive ─────────────────────────────────────── */
+        @media(max-width:600px) {
+            section {
+                padding: 50px 6%
+            }
+
+            .projects {
+                grid-template-columns: 1fr
+            }
+
+            .modal {
+                max-height: 90vh;
+                border-radius: 14px
+            }
+
+            .modal-header {
+                padding: 18px 20px 12px
+            }
+
+            .modal-body {
+                padding: 18px 20px 22px
+            }
+        }
+    </style>
 
 </head>
 
 <body>
 
-<header>
+    <header>
 
-<h1>Devi M</h1>
+        <h1>Devi Mutyala</h1>
 
-<p>
-Machine Learning Engineer | AI Developer
-</p>
+        <p class="subtitle">
+            Machine Learning Engineer · AI Developer
+        </p>
 
-<p>
-Building AI systems using Large Language Models, Speech AI, and Multimodal Deep Learning.
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/mutyaladevi17" class="btn">GitHub</a>
-<a href="#" class="btn">LinkedIn</a>
-<a href="resume.pdf" class="btn">Resume</a>
-
-</div>
-
-</header>
-
-<nav>
-
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-
-I am an aspiring Machine Learning Engineer passionate about building intelligent systems
-using deep learning, natural language processing, and computer vision.
-
-My projects focus on building **AI applications powered by LLMs, multimodal models,
-speech processing pipelines, and computer vision techniques**.
-
-I enjoy designing end-to-end machine learning systems from data preprocessing to model
-development and deployment.
-
-</p>
-
-</section>
-
-<section id="projects">
-
-<h2>Featured Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-
-<h3>Airline AI Chat Agent</h3>
-
-<p>
-
-A conversational AI system that assists users with airline-related queries
-using natural language understanding and LLM-based dialogue systems.
-
-</p>
-
-<p class="tech">
-
-Python • LLM • NLP • Conversational AI
-
-</p>
-
-<a href="https://github.com/mutyaladevi17/AirlineAIChatAgent">GitHub →</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Audio Transcriber & Summarizer</h3>
-
-<p>
-
-Speech processing pipeline that converts audio to text and generates
-automatic summaries using NLP models.
-
-</p>
-
-<p class="tech">
-
-Python • Speech Recognition • Transformers • NLP
-
-</p>
-
-<a href="https://github.com/mutyaladevi17/AudioTranscriber-Summarizer">GitHub →</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>LLM Experiments</h3>
-
-<p>
-
-Implementation of Large Language Model workflows including prompt engineering,
-text generation pipelines, and AI automation tasks.
-
-</p>
-
-<p class="tech">
-
-Python • Transformers • LLM • Prompt Engineering
-
-</p>
-
-<a href="https://github.com/mutyaladevi17/LLM">GitHub →</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Visual Question Answering</h3>
-
-<p>
-
-Multimodal deep learning model that answers questions about images by combining
-computer vision and language understanding.
-
-</p>
-
-<p class="tech">
-
-Python • Deep Learning • Computer Vision • NLP
-
-</p>
-
-<a href="https://github.com/mutyaladevi17/Visual-Question-Answer">GitHub →</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Find Common Object</h3>
-
-<p>
-
-Computer vision project that identifies shared objects across multiple images
-using feature extraction and image similarity techniques.
-
-</p>
-
-<p class="tech">
-
-Python • OpenCV • Image Processing
-
-</p>
-
-<a href="https://github.com/mutyaladevi17/Find_Common_Object">GitHub →</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Python</div>
-<div class="skill">Machine Learning</div>
-<div class="skill">Deep Learning</div>
-<div class="skill">PyTorch</div>
-<div class="skill">TensorFlow</div>
-<div class="skill">Transformers</div>
-<div class="skill">Computer Vision</div>
-<div class="skill">NLP</div>
-<div class="skill">Speech AI</div>
-<div class="skill">LLMs</div>
-<div class="skill">OpenCV</div>
-<div class="skill">Git</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: your_email@gmail.com</p>
-
-<p>
-
-<a href="https://github.com/mutyaladevi17">GitHub</a> |
-<a href="#">LinkedIn</a>
-
-</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 Devi M | Machine Learning Portfolio</p>
-
-</footer>
+        <p class="tagline">
+            Building AI systems using Large Language Models, Speech AI, and Multimodal Deep Learning.
+        </p>
+
+        <div class="buttons">
+
+            <a href="https://github.com/mutyaladevi17" class="btn btn-primary" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/devi-mutyala-90325a78/" class="btn btn-outline" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            <a href="resume.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Resume</a>
+
+        </div>
+
+    </header>
+
+    <nav>
+
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <section id="about">
+
+        <h2>About <span class="accent">Me</span></h2>
+
+        <p>
+            I am a <strong>Ph.D. candidate at UT Austin</strong> and an aspiring Machine Learning Engineer with
+            experience as a <strong>Data Scientist Intern at Intel</strong> (Design & Patterning AI group). I
+            specialize in building
+            high-impact AI systems using <strong>Large Language Models (LLMs)</strong>, <strong>Agentic AI</strong>, and
+            <strong>Computer Vision</strong>.
+        </p>
+        <p>
+            My work spans from developing <strong>multi-modal speech assistants</strong> and <strong>autonomous agentic
+                pipelines</strong> to engineering <strong>explainable AI (XAI)</strong> models for complex engineering
+            layouts. I enjoy architecting end-to-end ML solutions that bridge the gap between advanced research and
+            scalable production.
+        </p>
+
+    </section>
+
+    <section id="projects">
+
+        <h2>Featured <span class="accent">Projects</span></h2>
+        <p class="section-sub">A collection of AI & ML projects I've built — click "More Details" for in-depth
+            information.</p>
+
+        <div class="projects">
+
+            <!-- ═══ Airline AI Chat Agent ═══ -->
+            <div class="card">
+
+                <h3>Multimodal Flight Assistant</h3>
+
+                <p class="desc">
+                    A Intelligent multi-agent system featuring a dual-LLM orchestration architecture.
+                    Engineered an Agentic AI pipeline with OpenAI Tool Calling (Function Calling)
+                    to securely map user intent to real-time SQL queries, enabling autonomous
+                    ticket price retrieval and dynamic updates via text and voice.
+                </p>
+
+                <div class="tech">
+                    <span>Agentic AI</span>
+                    <span>OpenAI Tool Calling</span>
+                    <span>Whisper</span>
+                    <span>Hugging Face</span>
+                    <span>PyTorch</span>
+                    <span>SQL</span>
+                    <span>Multi-Agent</span>
+                    <span>Python</span>
+                    <span>OpenAI API</span>
+                    <span>Gradio</span>
+                </div>
+
+                <div class="card-actions">
+                    <a href="https://github.com/mutyaladevi17/AirlineAIChatAgent" target="_blank"
+                        rel="noopener noreferrer">GitHub →</a>
+                    <button class="btn-details" onclick="openModal('modal-airline')">More Details</button>
+                </div>
+
+            </div>
+
+            <!-- ═══ Audio Transcriber & Summarizer ═══ -->
+            <div class="card">
+
+                <h3>Smart Audio Scribe</h3>
+
+                <p class="desc">
+                    An end-to-end Speech-to-Text (STT) pipeline leveraging OpenAI Whisper for
+                    high-accuracy transcription and Pyannote for precise speaker diarization.
+                    Engineered a Generative AI engine utilizing Meta Llama LLMs via
+                    Hugging Face Transformers to synthesize context-aware meeting minutes, speech
+                    summaries, and conversation summaries.
+                </p>
+
+                <div class="tech">
+                    <span>OpenAI Whisper</span>
+                    <span>Pyannote</span>
+                    <span>Meta Llama</span>
+                    <span>Hugging Face</span>
+                    <span>PyTorch</span>
+                    <span>STT</span>
+                </div>
+
+                <div class="card-actions">
+                    <a href="https://github.com/mutyaladevi17/AudioTranscriber-Summarizer" target="_blank"
+                        rel="noopener noreferrer">GitHub →</a>
+                    <button class="btn-details" onclick="openModal('modal-audio')">More Details</button>
+                </div>
+
+            </div>
+
+            <!-- ═══ Visual Question Answering ═══ -->
+            <div class="card">
+
+                <h3>Visual Question Answering</h3>
+
+                <p class="desc">
+                    A multimodal Medical VQA system built on the VQA-RAD dataset. Includes a
+                    generative text model fine-tuned with Gemma + LoRA, binary classification
+                    models (BioClip-BERT, DenseNet121-BiLSTM), and closed VQA models
+                    (ViT-BLIP). Features Gemini-enhanced dataset generation.
+                </p>
+
+                <div class="tech">
+                    <span>Python</span>
+                    <span>Gemma / LoRA</span>
+                    <span>Gemini</span>
+                    <span>ViT-BLIP</span>
+                    <span>DenseNet121</span>
+                    <span>Hugging Face</span>
+                    <span>PyTorch</span>
+                    <span>Computer Vision</span>
+                    <span>NLP</span>
+                </div>
+
+                <div class="card-actions">
+                    <a href="https://github.com/mutyaladevi17/Visual-Question-Answer" target="_blank"
+                        rel="noopener noreferrer">GitHub →</a>
+                    <button class="btn-details" onclick="openModal('modal-vqa')">More Details</button>
+                </div>
+
+            </div>
+
+
+            <!-- ═══ Company Stock News Summarizer ═══ -->
+            <div class="card">
+
+                <h3>Company Stock News Summarizer</h3>
+
+                <p class="desc">
+                    An AI-powered financial intelligence tool that automatically scrapes
+                    finance websites like Yahoo Finance, uses GPT to filter the most relevant
+                    news links, extracts their content, and generates comprehensive
+                    markdown-formatted stock news summaries.
+                </p>
+
+                <div class="tech">
+                    <span>Python</span>
+                    <span>OpenAI GPT</span>
+                    <span>BeautifulSoup</span>
+                    <span>Requests</span>
+                    <span>Web Scraping</span>
+                    <span>NLP</span>
+                </div>
+
+                <div class="card-actions">
+                    <a href="https://github.com/mutyaladevi17/LLM" target="_blank" rel="noopener noreferrer">GitHub
+                        →</a>
+                    <button class="btn-details" onclick="openModal('modal-stock')">More Details</button>
+                </div>
+
+            </div>
+
+            <!-- ═══ Website Summarizer ═══ -->
+            <div class="card">
+
+                <h3>Website Summarizer</h3>
+
+                <p class="desc">
+                    A lightweight website-to-summary tool that fetches a webpage's text,
+                    strips scripts and noise, and sends it to a locally-running Ollama LLM
+                    to produce a short, markdown-formatted summary — all within a Jupyter
+                    notebook.
+                </p>
+
+                <div class="tech">
+                    <span>Python</span>
+                    <span>Ollama</span>
+                    <span>BeautifulSoup</span>
+                    <span>OpenAI SDK</span>
+                    <span>Web Scraping</span>
+                    <span>lxml</span>
+                </div>
+
+                <div class="card-actions">
+                    <a href="https://github.com/mutyaladevi17/LLM" target="_blank" rel="noopener noreferrer">GitHub
+                        →</a>
+                    <button class="btn-details" onclick="openModal('modal-websumm')">More Details</button>
+                </div>
+
+            </div>
+
+
+            <!-- ═══ Find Common Object ═══ -->
+            <div class="card">
+
+                <h3>Find Common Object</h3>
+
+                <p class="desc">
+                    A CNN-based Explainable AI model implementing Prototypical Part Networks
+                    (ProtoPNet) to automatically discover and localize common objects within
+                    a target image class. Learns human-interpretable prototypes and provides
+                    spatial localization with bounding boxes and heatmaps.
+                </p>
+
+                <div class="tech">
+                    <span>Python</span>
+                    <span>PyTorch</span>
+                    <span>torchvision</span>
+                    <span>ProtoPNet</span>
+                    <span>CNN</span>
+                    <span>Explainable AI</span>
+                    <span>Matplotlib</span>
+                    <span>Computer Vision</span>
+                </div>
+
+                <div class="card-actions">
+                    <a href="https://github.com/mutyaladevi17/Find_Common_Object" target="_blank"
+                        rel="noopener noreferrer">GitHub →</a>
+                    <button class="btn-details" onclick="openModal('modal-fco')">More Details</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Python</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Deep Learning</div>
+            <div class="skill">PyTorch</div>
+            <div class="skill">Transformers</div>
+            <div class="skill">Computer Vision</div>
+            <div class="skill">NLP</div>
+            <div class="skill">Speech AI</div>
+            <div class="skill">LLMs</div>
+            <div class="skill">OpenAI API</div>
+            <div class="skill">Hugging Face</div>
+            <div class="skill">Gradio</div>
+            <div class="skill">Ollama</div>
+            <div class="skill">Fine-tuning / LoRA</div>
+            <div class="skill">Prompt Engineering</div>
+            <div class="skill">Web Scraping</div>
+            <div class="skill">Git</div>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>Email: your_email@gmail.com</p>
+
+        <p>
+
+            <a href="https://github.com/mutyaladevi17" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://www.linkedin.com/in/devi-mutyala-90325a78/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+
+        </p>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 Devi Mutyala · Machine Learning Portfolio</p>
+
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════
+     MODAL POPUPS
+     ═══════════════════════════════════════════════════════ -->
+
+    <!-- ── Airline AI Chat Agent ───────────────────────────── -->
+    <div class="modal-overlay" id="modal-airline">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Multimodal Flight Assistant</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+
+                <h4>Overview</h4>
+                <p>A multi-agent system featuring a dual-LLM orchestration architecture to dynamically route open-ended
+                    dialogue and normalize geographic entities for complex flight booking workflows.</p>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Multi-Modal AI Agent</strong> — Operates via both audio (speech-to-text and
+                        text-to-speech) and text for a seamless customer service experience.</li>
+                    <li><strong>Dual LLM Architecture</strong> — Employs two specialized LLMs: one for the main
+                        conversational chat, and another exclusively for city normalization (finding the nearest valid
+                        city in the database).</li>
+                    <li><strong>Tool Calling for Database Integration</strong> — Leverages OpenAI's tool calling to
+                        securely access real-time data from a company SQLite database, highly applicable for enterprise
+                        use cases.</li>
+                    <li><strong>Ticket Price Queries</strong> — Customers can inquire about flight ticket prices to any
+                        destination.</li>
+                    <li><strong>Secure Price Updates</strong> — Authentication-protected functionality for authorized
+                        staff to update prices.</li>
+                </ul>
+
+                <h4>How It Works</h4>
+                <div class="flow-step">1. User interacts via Gradio multi-modal interface — text or voice.</div>
+                <div class="flow-step">2. Voice input is transcribed via OpenAI Whisper (STT).</div>
+                <div class="flow-step">3. Specialized routing LLM normalizes geographic entities for accurate SQL
+                    lookup.</div>
+                <div class="flow-step">4. Main reasoning LLM utilizes Function Calling to construct and execute SQL
+                    queries.</div>
+                <div class="flow-step">5. Database results are synthesized into natural language responses.</div>
+                <div class="flow-step">6. Response is delivered as text and converted to speech via TTS.</div>
+
+                <h4>Technologies</h4>
+                <div class="modal-tech">
+                    <span>Agentic AI</span><span>OpenAI Tool Calling</span><span>Whisper (STT)</span><span>SQL</span>
+                    <span>PyTorch</span><span>Gradio</span><span>Multi-Agent Systems</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Audio Transcriber & Summarizer ──────────────────── -->
+    <div class="modal-overlay" id="modal-audio">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Smart Audio Scribe</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+
+                <h4>Overview</h4>
+                <p>An end-to-end Speech-to-Text (STT) pipeline leveraging OpenAI Whisper for high-accuracy transcription
+                    and Pyannote for precise speaker diarization of multi-speaker audio. Synthesizes context-aware
+                    meeting minutes using Generative AI.</p>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Speaker Diarization</strong> — Identifies different speakers in audio using Pyannote
+                        speaker diarization models.</li>
+                    <li><strong>Audio Transcription</strong> — Converts speech to text using OpenAI's Whisper models.
+                    </li>
+                    <li><strong>Content-Aware Summarization</strong> — Uses Meta Llama models to categorize content and
+                        generate tailored summaries:
+                        <ul>
+                            <li><em>Meeting</em> → Detailed minutes with key points, takeaways, and action items.</li>
+                            <li><em>Speech</em> → Key points, objectives, and goals.</li>
+                            <li><em>Conversation</em> → Discussion summary with speaker attribution.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gradio Web Interface</strong> — Upload audio files or record directly from microphone.
+                    </li>
+                    <li><strong>Customizable Settings</strong> — Adjust diarization, transcription, and summarization
+                        models, speaker counts, and quantization settings.</li>
+                </ul>
+
+                <h4>Supported Models</h4>
+                <ul>
+                    <li><strong>Diarization:</strong> Pyannote speaker-diarization models</li>
+                    <li><strong>Transcription:</strong> OpenAI Whisper (Local)</li>
+                    <li><strong>Summarization:</strong> Meta Llama LLMs via Hugging Face</li>
+                </ul>
+
+                <h4>Technologies</h4>
+                <div class="modal-tech">
+                    <span>OpenAI Whisper</span><span>Pyannote</span><span>Meta Llama</span><span>Hugging Face</span>
+                    <span>PyTorch</span><span>Generative AI</span><span>STT</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Company Stock News Summarizer ───────────────────── -->
+    <div class="modal-overlay" id="modal-stock">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Company Stock News Summarizer</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+
+                <h4>Overview</h4>
+                <p>An intelligent tool that automatically scrapes financial websites, filters relevant news links, and
+                    generates comprehensive stock news summaries for companies using OpenAI's GPT models.</p>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Intelligent Link Filtering</strong> — Uses GPT to identify and prioritize the most
+                        relevant financial news links (up to 10 links).</li>
+                    <li><strong>Content Extraction</strong> — Automatically fetches and processes content from multiple
+                        news sources using BeautifulSoup.</li>
+                    <li><strong>Comprehensive Summaries</strong> — Generates detailed markdown-formatted summaries using
+                        GPT-4.1-mini.</li>
+                    <li><strong>Smart Filtering</strong> — Excludes irrelevant content like ads, terms of service, and
+                        promotional pages.</li>
+                    <li><strong>Error Handling</strong> — Gracefully handles failed link fetches and provides status
+                        updates.</li>
+                </ul>
+
+                <h4>How It Works</h4>
+                <div class="flow-step">1. Extracts all links from the provided finance website URL.</div>
+                <div class="flow-step">2. GPT analyzes the links and selects up to 10 most relevant ones.</div>
+                <div class="flow-step">3. Scraper module fetches content from each selected link.</div>
+                <div class="flow-step">4. GPT-4.1-mini analyzes all collected content and generates a comprehensive
+                    summary.</div>
+
+                <h4>Prioritized Content</h4>
+                <ul>
+                    <li>Stock news and price movements</li>
+                    <li>Financial reports and earnings</li>
+                    <li>Company announcements</li>
+                    <li>Competitor analysis and industry trends</li>
+                    <li>Market analysis</li>
+                </ul>
+
+                <h4>Technologies</h4>
+                <div class="modal-tech">
+                    <span>OpenAI GPT</span><span>BeautifulSoup</span><span>Requests</span>
+                    <span>Python-dotenv</span><span>Jupyter Notebook</span><span>Multi-Model</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Website Summarizer ─────────────────────────────── -->
+    <div class="modal-overlay" id="modal-websumm">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Website Summarizer</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+
+                <h4>Overview</h4>
+                <p>A lightweight website-to-summary tool built in a Jupyter notebook. It fetches a webpage's text,
+                    strips scripts, styles and noise, and sends the cleaned text to a locally-running Ollama model to
+                    produce a short, humorous markdown summary.</p>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Web Scraping</strong> — Fetches and cleans webpage text using BeautifulSoup, removing
+                        scripts, styles and irrelevant markup.</li>
+                    <li><strong>Local LLM Inference</strong> — Uses a local Ollama server (OpenAI-compatible API at
+                        localhost:11434) — no cloud API key needed.</li>
+                    <li><strong>Markdown Output</strong> — Summaries are rendered directly as markdown in the notebook.
+                    </li>
+                    <li><strong>Model Flexibility</strong> — Swap between models easily (phi3, Llama 3.1, Qwen 2.5,
+                        etc.); larger models produce more accurate summaries.</li>
+                </ul>
+
+                <h4>Usage</h4>
+                <p>Run the notebook and call:</p>
+                <div class="flow-step"><code>display_summary(url="https://example.com", model="phi3:latest")</code>
+                </div>
+
+                <h4>Limitations</h4>
+                <ul>
+                    <li>Pages with heavy client-side JavaScript or paywalls may not scrape cleanly.</li>
+                    <li>Prompt is finance-focused by default — editable in the notebook.</li>
+                </ul>
+
+                <h4>Technologies</h4>
+                <div class="modal-tech">
+                    <span>Ollama</span><span>OpenAI SDK</span><span>BeautifulSoup</span>
+                    <span>lxml</span><span>Python-dotenv</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Visual Question Answering ───────────────────────── -->
+    <div class="modal-overlay" id="modal-vqa">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Visual Question Answering</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+
+                <h4>Overview</h4>
+                <p>A comprehensive Medical Visual Question Answering system built on the VQA-RAD radiology dataset. The
+                    project explores multiple model architectures for answering medical image questions, from generative
+                    fine-tuned models to binary and closed-answer classifiers.</p>
+
+                <h4>Models</h4>
+                <ul>
+                    <li><strong>Generative Text Model</strong>
+                        <ul>
+                            <li>Fine-tuned <strong>Gemma with LoRA</strong> on VQA-RAD dataset.</li>
+                            <li><strong>Gemini-enhanced dataset generation</strong> for improved training data.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Binary Classification Models</strong>
+                        <ul>
+                            <li>BioClip-BERT Binary Model</li>
+                            <li>DenseNet121-BiLSTM Binary Model</li>
+                        </ul>
+                    </li>
+                    <li><strong>Closed Answer Models</strong>
+                        <ul>
+                            <li>ViT-BLIP Closed Binary Model</li>
+                            <li>DenseNet121-BiLSTM Closed Model</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Blog Post</h4>
+                <p><a href="https://medium.com/@devi.mutyala17/fine-tuning-gemma-for-medical-vqa-a-step-by-step-guide-with-vqa-rad-e4fac3c7c443"
+                        target="_blank" rel="noopener noreferrer">Fine-tuning Gemma for Medical VQA: A
+                        Step-by-Step Guide with VQA-RAD →</a></p>
+
+                <h4>Technologies</h4>
+                <div class="modal-tech">
+                    <span>Gemma / LoRA</span><span>Gemini</span><span>ViT-BLIP</span>
+                    <span>DenseNet121</span><span>BiLSTM</span><span>BioClip-BERT</span><span>PyTorch</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Find Common Object ─────────────────────────────── -->
+    <div class="modal-overlay" id="modal-fco">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Find Common Object (Explainable AI)</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+
+                <h4>Overview</h4>
+                <p>A CNN-based Explainable AI model implementing Prototypical Part Networks (ProtoPNet) to automatically
+                    discover and localize common objects within a target image class. The model learns discriminative
+                    prototypes representing shared visual patterns across target images while distinguishing them from
+                    background images.</p>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Explainable AI</strong> — Provides interpretable visualizations of which image regions
+                        are important for classification.</li>
+                    <li><strong>Prototype-Based Learning</strong> — Learns human-interpretable prototypical parts from
+                        real image patches, not abstract weights.</li>
+                    <li><strong>Automatic Localization</strong> — Identifies spatial locations of common objects via
+                        bounding boxes and heatmaps.</li>
+                    <li><strong>Distance-Based Decisions</strong> — Classification relies on interpretable similarity
+                        scores between patches and prototypes.</li>
+                </ul>
+
+                <h4>Architecture</h4>
+                <ul>
+                    <li><strong>Feature Extractor</strong> — Convolutional base network extracting spatial feature maps.
+                    </li>
+                    <li><strong>Add-on Layers</strong> — Task-specific transformations bridging features to prototype
+                        space.</li>
+                    <li><strong>Prototype Vectors</strong> — Learnable vectors projected onto real image patches (push
+                        operation).</li>
+                    <li><strong>Classification Layer</strong> — Similarity-score-based predictions.</li>
+                </ul>
+
+                <h4>Training Pipeline</h4>
+                <div class="flow-step">1. Warm-up Phase — Freeze feature extractor, train add-on layers and prototypes
+                    only.</div>
+                <div class="flow-step">2. Joint Training — Train all components with clustering, separation, and L1
+                    loss.</div>
+                <div class="flow-step">3. Prototype Projection (Push) — Replace prototypes with nearest real image
+                    patches.</div>
+                <div class="flow-step">4. Post-Push Stabilization — Fine-tune after push for stability.</div>
+                <div class="flow-step">5. Last-Layer Fine-tuning — Adjust decision boundaries.</div>
+                <div class="flow-step">6. Analysis — Nearest patch analysis, coverage metrics, diversity scores, grid
+                    visualizations.</div>
+
+                <h4>Output Artifacts</h4>
+                <ul>
+                    <li>Prototype visualizations &amp; nearest patch images</li>
+                    <li>Bounding box localizations</li>
+                    <li>Distance distribution plots &amp; coverage metrics</li>
+                    <li>Model checkpoints at each training phase</li>
+                </ul>
+
+                <h4>Technologies</h4>
+                <div class="modal-tech">
+                    <span>PyTorch</span><span>ProtoPNet</span><span>torchvision</span>
+                    <span>NumPy</span><span>Matplotlib</span><span>PIL</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ JavaScript ═══════════════════════════════════════ -->
+    <script>
+
+        function openModal(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.style.display = 'flex';
+            requestAnimationFrame(() => el.classList.add('active'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.querySelectorAll('.modal-overlay.active').forEach(el => {
+                el.classList.remove('active');
+                setTimeout(() => { el.style.display = 'none' }, 300);
+            });
+            document.body.style.overflow = '';
+        }
+
+        /* Close on overlay click (not modal itself) */
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', e => {
+                if (e.target === overlay) closeModal();
+            });
+        });
+
+        /* Close on ESC */
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+    </script>
 
 </body>
 

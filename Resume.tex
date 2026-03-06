@@ -1,0 +1,239 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Font options
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%----------CUSTOM COMMANDS----------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      #1 & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Devi Mutyala} \\ \vspace{2pt}
+    \small \href{mailto:dm53776@eid.utexas.edu}{\underline{dm53776@eid.utexas.edu}} ~ $\vert$ ~ 
+    \href{mailto:mutyala.devi17@gmail.com}{\underline{mutyala.devi17@gmail.com}} ~ $\vert$ ~
+    \href{https://mutyaladevi17.github.io/}{\underline{mutyaladevi17.github.io}} ~ $\vert$ ~
+    \href{https://github.com/mutyaladevi17}{\underline{github.com/mutyaladevi17}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Texas at Austin}{2021 -- 2026}
+      {Ph.D. in Mechanical Engineering, Oden Institute (GPA: 3.95/4.0)}{Austin, TX}
+    \resumeSubheading
+      {Indian Institute of Technology, Delhi}{2019}
+      {M.S. (Research) in Mechanical Engineering (CGPA: 9.22/10)}{New Delhi, India}
+    \resumeSubheading
+      {Indian Institute of Technology, Kanpur}{2016}
+      {B.Tech. in Aerospace Engineering (CGPA: 8.2/10)}{Kanpur, India}
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{AI/ML Frameworks}{: PyTorch, Hugging Face Transformers, Scikit-Learn, TensorFlow, OpenCV, torchvision} \\
+     \textbf{LLMs \& Gen AI}{: OpenAI API (GPT-4, Whisper, TTS), Ollama, Google Gemma, Meta Llama, Gemini, LoRA / QLoRA, Fine-tuning, Prompt Engineering, Agentic AI, RAG} \\
+     \textbf{Data Science Tools}{: Gradio, BeautifulSoup, SQLite, MLOps (SageMaker), Jupyter, Git, Docker, Requests, lxml} \\
+     \textbf{Programming \& DB}{: Python, MongoDB, ReactJS, SQL, R, MATLAB, Fortran, C/C++} \\
+     \textbf{Engineering Software}{: LAMMPS, COMSOL, ANSYS Fluent, SpaceClaim, PTC Creo, ParaView} \\
+     \textbf{Relevant Coursework}{: Fine Tuning Open Source LLMs, Deep Learning, Multimodal Systems, Machine Learning with Python, Data Science Lab, Software Engineering \& Design, LLM Engineering}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Intel Corporation - Data Scientist (Internship)}{June 2025 -- Dec. 2025}
+      {Design \& Patterning AI Group (DPAI)}{Santa Clara, CA}
+      \resumeItemListStart
+        \resumeItem{Engineered interpretable deep-learning defect detection architectures for semiconductor chip layouts; constructed an end-to-end \textbf{Computer Vision (CV)} pipeline capable of layout-to-image generation and model training.}
+        \resumeItem{Developed robust ML workflows to address \textbf{severely limited labeled data} ($\sim 100$ samples) and \textbf{zero non-defect data}.}
+        \resumeItem{Designed and implemented a CNN-based \textbf{Prototypical Part Network (ProtoPNet)} to manage representative defect prototypes, optimizing for high coverage across defects. This enabled \textbf{explainable AI (XAI)} feature analysis.}
+        \resumeItem{Integrated a modular, \textbf{end-to-end ML pipeline} encompassing data augmentation, model training, and results visualization into an existing defect commonality detection codebase.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{AI \& Machine Learning Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Medical Visual Question Answering (VQA)} $|$ \emph{Gemma, LoRA, Hugging Face, Gemini, BioCLIP}}{Feb. 2025 -- May 2025}
+          \resumeItemListStart
+            \resumeItem{Built a multimodal Medical VQA system leveraging the \textbf{VQA-RAD dataset} to produce detailed clinical explanations for complex radiology images.}
+            \resumeItem{Fine-tuned a generative text model (\textbf{Gemma-3-4B-it}) utilizing \textbf{QLoRA}. Engineered a custom descriptive dataset using \textbf{Gemini-2.0-Flash} to augment short-answer data for enhanced generative training (\textbf{BLEU 0.2265, ROUGE-1 F1: 0.48}).}
+            \resumeItem{Developed benchmark classification pipelines utilizing \textbf{BioCLIP + BERT} and \textbf{DenseNet121 + BiLSTM}.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Multimodal Flight Assistant} $|$ \emph{Agentic AI, OpenAI Tool Calling, Whisper, PyTorch, SQL}}{March 2026}
+          \resumeItemListStart
+            \resumeItem{Architected a \textbf{multi-agent system} featuring a \textbf{dual-LLM orchestration architecture} to dynamically route open-ended dialogue and normalize geographic entities for complex flight booking workflows.}
+            \resumeItem{Engineered an \textbf{Agentic AI} pipeline leveraging \textbf{OpenAI Tool Calling} (Function Calling) to securely map user intent to real-time \textbf{SQL} queries, enabling autonomous ticket price retrieval and dynamic updates.}
+            \resumeItem{Built an end-to-end multi-modal interface integrating \textbf{OpenAI Whisper (STT)}, \textbf{TTS}, and \textbf{Gradio} for seamless voice-to-voice interactions.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Smart Audio Scribe} $|$ \emph{OpenAI Whisper, Pyannote, Meta Llama, Hugging Face, PyTorch}}{Feb. 2026}
+          \resumeItemListStart
+            \resumeItem{Architected an end-to-end \textbf{Speech-to-Text (STT)} pipeline leveraging \textbf{OpenAI Whisper} for high-accuracy transcription and \textbf{Pyannote} for precise \textbf{speaker diarization} of multi-speaker audio.}
+            \resumeItem{Engineered a \textbf{Generative AI} engine utilizing local \textbf{Meta Llama LLMs} via \textbf{Hugging Face Transformers} to autonomously parse transcripts and synthesize \textbf{context-aware meeting minutes} and action items.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{AI Financial News Summarizer \& Web Engine} $|$ \emph{GPT, Ollama, BeautifulSoup, lxml}}{Jan. 2026}
+          \resumeItemListStart
+            \resumeItem{Developed a scalable Python tool utilizing \textbf{GPT models} to intelligently classify and filter highly-relevant stock news from custom web-scraped (\textbf{BeautifulSoup}) Yahoo Finance pages.}
+            \resumeItem{Created a standalone, privacy-focused text extraction utility utilizing local \textbf{Ollama} models (\textbf{Phi-3, Llama 3.1}) and the \textbf{OpenAI SDK} for serverless, markdown-formatted webpage summarization.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Find Common Object (Explainable AI / ProtoPNet)} $|$ \emph{PyTorch, torchvision, CNN, Matplotlib}}{Dec. 2025}
+          \resumeItemListStart
+            \resumeItem{Developed a CNN-based \textbf{Explainable AI} model implementing Prototypical Part Networks (\textbf{ProtoPNet}) to automatically discover and localize common sub-objects across image classes.}
+            \resumeItem{Designed models that learn human-interpretable image prototypes rather than black-box embeddings, providing spatial localization through \textbf{bounding boxes, heatmaps,} and matched prototype visualizations.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------RESEARCH & ENGINEERING EXPERIENCE-----------
+\section{Engineering \& Research Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Oden Institute, University of Texas at Austin -- Graduate Researcher}{Sept. 2022 -- May 2025}
+      {Advisor: Prof. Narayana Aluru}{Austin, TX}
+      \resumeItemListStart
+        \resumeItem{Investigating complex physics of nanoscale systems to explore the development of a \textbf{nanofluidic memristor}.}
+        \resumeItem{Employing \textbf{Molecular Dynamics simulations (LAMMPS)} and \textbf{Poisson-Nernst-Planck continuum models (COMSOL)} to analyze ionic transport and electrokinetic behavior in nanoscale environments.}
+        \resumeItem{Utilizing \textbf{Python} to develop analytical frameworks and conduct comprehensive \textbf{data analysis}, uncovering insights connecting physical mechanisms with anomalies in large-scale simulation results.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Indian Institute of Technology, Madras -- Project Associate}{Aug. 2020 -- Apr. 2021}
+      {Department of Aerospace Engineering}{Chennai, India}
+      \resumeItemListStart
+        \resumeItem{Executed \textbf{Large-Eddy Simulations (LES)} of high Reynolds number channel flows with non-equilibrium effects.}
+        \resumeItem{Implemented \textbf{wall-modeled LES (wall stress model)} and sensor-based computations for accurate transition flow modeling into high-fidelity \textbf{in-house CFD solvers}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Havells India Ltd. -- Research Engineer}{July 2019 -- Aug. 2020}
+      {Center for Research and Innovation}{Delhi, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Patented Venturi Air Cooler:} Designed an energy-efficient device eliminating water pumps by harnessing pressure/temperature profiles. Secondary inventor on patent \textbf{IN202011018315}.}
+        \resumeItem{Developed analytical models leveraging \textbf{Blade Element theory} and \textbf{CFD} to design aerodynamic hardware, significantly improving volumetric flow rates and \textbf{minimizing power consumption} before scalable production.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {University of Texas at Austin / IIT Delhi -- Teaching Assistant}{2017 -- 2025}
+      {Mechanical Engineering Departments}{Austin, TX \& Delhi, India}
+      \resumeItemListStart
+        \resumeItem{Instructed tutorial sessions and conducted automated evaluations using Python for Applied Thermodynamics (2025), Computational Fluid Dynamics (2022), Propulsion (2021), and Gas Dynamics (2018).}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS & PATENTS-----------
+\section{Publications \& Patents}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\textbf{Publications:} \textit{Ozonated Monolayer Graphene for Extended Performance and Durability in Hydrogen Fuel Cell Electric Vehicles.} Devi Mutyala, Deji Akinwande, et al. ACS Nano (2025).}
+    \resumeSubItem{\textbf{Publications:} \textit{Room-Temperature Pulsed Laser Deposition of Boron Nitride for Enhanced Fuel Cell Selectivity.} Devi Mutyala, Deji Akinwande, et al. ACS Nano (2025).}
+    \resumeSubItem{\textbf{Patents:} \textit{Venturi Air Cooler.} Issued January 17, 2024. Patent Number IN202011018315.}
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS & ACHIEVEMENTS-----------
+\section{Awards \& Achievements}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\textbf{Academic Awards:} Recipient of the \textbf{UT Austin Engineering Fellowship} (2021-2025) and the \textbf{IIT Kanpur Academic Excellence Award} awarded to the top 5\% of the class (2014-2015).}
+    \resumeSubItem{\textbf{Leadership and Service:} Recipient of the \textbf{Institute Blues} (2016), the highest honor at IIT Kanpur for exceptional sports leadership and institutional impact as Team Captain and Deputy Contingent Leader.}
+    \resumeSubItem{\textbf{Athletics Achievements:} Attained 8 Inter IIT Athletics records and 11 Gold medals in track and field at IIT. Served as Captain of the Institute Athletics Team and Deputy Contingent Leader.}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
