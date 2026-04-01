@@ -880,13 +880,20 @@
                 </ul>
 
                 <h4>How It Works</h4>
-                <div class="flow-step">1. <strong>Ingestion:</strong> Documents are semantically segmented by an LLM based on logical boundaries rather than token counts.</div>
-                <div class="flow-step">2. <strong>Summarization:</strong> Each chunk is automatically passed to an LLM to generate a headline and dense summary.</div>
-                <div class="flow-step">3. <strong>Database Storage:</strong> The specialized chunks and their summaries are vectorized and stored in ChromaDB.</div>
-                <div class="flow-step">4. <strong>Query Rewriting:</strong> Incoming user queries are rewritten by an LLM, analyzing previous chat history to optimize search terms.</div>
-                <div class="flow-step">5. <strong>Multi-Query Retrieval:</strong> Both the original and rewritten queries are searched concurrently against the vector DB.</div>
-                <div class="flow-step">6. <strong>LLM Reranking:</strong> Retrieved chunks are dynamically rescored and re-ordered by an LLM-as-a-judge specifically for maximum relevance.</div>
-                <div class="flow-step">7. <strong>Generation:</strong> The most highly-ranked chunks are injected as context into the final generation node.</div>
+                <div class="flow-step">1. <strong>Ingestion:</strong> Documents are semantically segmented by an LLM
+                    based on logical boundaries rather than token counts.</div>
+                <div class="flow-step">2. <strong>Summarization:</strong> Each chunk is automatically passed to an LLM
+                    to generate a headline and dense summary.</div>
+                <div class="flow-step">3. <strong>Database Storage:</strong> The specialized chunks and their summaries
+                    are vectorized and stored in ChromaDB.</div>
+                <div class="flow-step">4. <strong>Query Rewriting:</strong> Incoming user queries are rewritten by an
+                    LLM, analyzing previous chat history to optimize search terms.</div>
+                <div class="flow-step">5. <strong>Multi-Query Retrieval:</strong> Both the original and rewritten
+                    queries are searched concurrently against the vector DB.</div>
+                <div class="flow-step">6. <strong>LLM Reranking:</strong> Retrieved chunks are dynamically rescored and
+                    re-ordered by an LLM-as-a-judge specifically for maximum relevance.</div>
+                <div class="flow-step">7. <strong>Generation:</strong> The most highly-ranked chunks are injected as
+                    context into the final generation node.</div>
 
                 <h4>Evaluation Results vs Baseline</h4>
                 <p>An automated LLM-as-a-judge framework revealed substantial improvements over standard RAG
@@ -935,11 +942,17 @@
                 </ul>
 
                 <h4>How It Works</h4>
-                <div class="flow-step">1. <strong>Document Processing:</strong> Raw documents are loaded and split natively using standard LangChain text splitters (comparing Small, Large, and Hybrid sizes).</div>
-                <div class="flow-step">2. <strong>Embedding:</strong> Dense vector embeddings are generated for each chunk using OpenAI's `text-embedding-3-large`.</div>
-                <div class="flow-step">3. <strong>Vector Retrieval:</strong> User queries are embedded, and an Approximate Nearest Neighbor (ANN) search retrieves the most mathematically similar text from ChromaDB.</div>
-                <div class="flow-step">4. <strong>Context Construction:</strong> The retrieved context and user query are injected into a LangChain prompt template.</div>
-                <div class="flow-step">5. <strong>Generation:</strong> The final prompt is processed by the LLM (`gpt-4.1-nano`) to generate the conversational response.</div>
+                <div class="flow-step">1. <strong>Document Processing:</strong> Raw documents are loaded and split
+                    natively using standard LangChain text splitters (comparing Small, Large, and Hybrid sizes).</div>
+                <div class="flow-step">2. <strong>Embedding:</strong> Dense vector embeddings are generated for each
+                    chunk using OpenAI's `text-embedding-3-large`.</div>
+                <div class="flow-step">3. <strong>Vector Retrieval:</strong> User queries are embedded, and an
+                    Approximate Nearest Neighbor (ANN) search retrieves the most mathematically similar text from
+                    ChromaDB.</div>
+                <div class="flow-step">4. <strong>Context Construction:</strong> The retrieved context and user query
+                    are injected into a LangChain prompt template.</div>
+                <div class="flow-step">5. <strong>Generation:</strong> The final prompt is processed by the LLM
+                    (`gpt-4.1-nano`) to generate the conversational response.</div>
 
                 <h4>Technologies</h4>
                 <div class="modal-tech">
