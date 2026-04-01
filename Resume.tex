@@ -110,9 +110,9 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{AI/ML Frameworks}{: PyTorch, Hugging Face Transformers, Scikit-Learn, TensorFlow, OpenCV, torchvision} \\
-     \textbf{LLMs \& Gen AI}{: OpenAI API (GPT-4, Whisper, TTS), Ollama, Google Gemma, Meta Llama, Gemini, LoRA / QLoRA, Fine-tuning, Prompt Engineering, Agentic AI, RAG} \\
+     \textbf{LLMs \& Gen AI}{: OpenAI API (GPT-4, Whisper, TTS), LangChain, Litellm, Ollama, Google Gemma, Meta Llama, Gemini, LoRA / QLoRA, Fine-tuning, Prompt Engineering, Agentic AI, RAG} \\
      \textbf{Data Science Tools}{: Gradio, BeautifulSoup, SQLite, MLOps (SageMaker), Jupyter, Git, Docker, Requests, lxml} \\
-     \textbf{Programming \& DB}{: Python, MongoDB, ReactJS, SQL, R, MATLAB, Fortran, C/C++} \\
+     \textbf{Programming \& DB}{: Python, SQL, ChromaDB, MongoDB, ReactJS, R, MATLAB, Fortran, C} \\
      \textbf{Engineering Software}{: LAMMPS, COMSOL, ANSYS Fluent, SpaceClaim, PTC Creo, ParaView} \\
      \textbf{Relevant Coursework}{: Fine Tuning Open Source LLMs, Deep Learning, Multimodal Systems, Machine Learning with Python, Data Science Lab, Software Engineering \& Design, LLM Engineering}
     }}
@@ -141,51 +141,59 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{\href{https://github.com/mutyaladevi17/visual-question-answer}{Medical Visual Question Answering (VQA)}} $|$ \emph{Gemma, LoRA, Hugging Face, Gemini, BioCLIP}}{Feb. 2025 -- May 2025}
+          {\textbf{\href{https://github.com/mutyaladevi17/RAG-advancedRetrevial}{Advanced Retrieval-Augmented Generation (RAG) System}} $|$ \emph{LangChain, OpenAI API, Litellm, ChromaDB, Gradio}}{}
           \resumeItemListStart
-            \resumeItem{Built a multimodal Medical VQA system leveraging the \textbf{VQA-RAD dataset} to produce detailed clinical explanations for complex radiology images.}
-            \resumeItem{Fine-tuned a generative text model (\textbf{Gemma-3-4B-it}) utilizing \textbf{QLoRA}. Engineered a custom descriptive dataset using \textbf{Gemini-2.0-Flash} to augment short-answer data for enhanced generative training (\textbf{BLEU 0.2265, ROUGE-1 F1: 0.48}).}
-            \resumeItem{Developed benchmark classification pipelines utilizing \textbf{BioCLIP + BERT} and \textbf{DenseNet121 + BiLSTM}.}
+            \resumeItem{Architected a sophisticated dual-pipeline RAG system, benchmarking a baseline \textbf{LangChain} implementation against a custom-built advanced retrieval engine utilizing \textbf{OpenAI SDK} and \textbf{Litellm} for superior querying.}
+            \resumeItem{Engineered an advanced ingestion pipeline featuring \textbf{semantic document segmentation} and zero-shot \textbf{LLM chunk summarization} to radically maximize embedding contextual density within local \textbf{ChromaDB} vector storage collections.}
+            \resumeItem{Implemented dynamic \textbf{query rewriting}, multi-query concurrent retrieval, and precise \textbf{LLM-based reranking}, boosting performance over the \textbf{baseline LangChain MRR (0.85) to an exceptional 0.88 MRR}.}
+            \resumeItem{Developed a comprehensive \textbf{LLM-as-a-judge evaluation framework} with interactive \textbf{Gradio} dashboards, validating improvements from the \textbf{92\% baseline to a 95.5\% keyword coverage rating} and increasing absolute accuracy to \textbf{4.51/5}.}
+          \resumeItemListEnd
+
+    \resumeProjectHeading
+          {\textbf{\href{https://github.com/mutyaladevi17/visual-question-answer}{Medical Visual Question Answering (VQA)}} $|$ \emph{Gemma, LoRA, Hugging Face, Gemini, BioCLIP, DenseNet, BERT}}{}
+          \resumeItemListStart
+            \resumeItem{Built a multimodal Medical Visual Question Answering (VQA) system leveraging the comprehensive \textbf{VQA-RAD dataset} to autonomously generate highly detailed clinical explanations and diagnostic insights for complex radiology scans.}
+            \resumeItem{Fine-tuned a generative text model (\textbf{Gemma-3-4B-it}) via \textbf{QLoRA}, and engineered a custom descriptive dataset using \textbf{Gemini-2.0} to augment short-answer inputs for enhanced training convergence (\textbf{BLEU 0.23, ROUGE F1: 0.48}).}
+            \resumeItem{Developed high-accuracy benchmark classification pipelines utilizing foundational visual models including \textbf{BioCLIP + BERT} alongside custom architectures integrating \textbf{DenseNet121 + BiLSTM} for robust baseline validation.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{\href{https://github.com/mutyaladevi17/multimodal-flight-assistant}{Multimodal Flight Assistant}} $|$ \emph{Agentic AI, OpenAI Tool Calling, Whisper, PyTorch, SQL}}{March 2026}
+          {\textbf{\href{https://github.com/mutyaladevi17/multimodal-flight-assistant}{Multimodal Flight Assistant}} $|$ \emph{Agentic AI, OpenAI Tool Calling, Whisper, PyTorch, SQL}}{}
           \resumeItemListStart
-            \resumeItem{Architected a \textbf{multi-agent system} featuring a \textbf{dual-LLM orchestration architecture} to dynamically route open-ended dialogue and normalize geographic entities for complex flight booking workflows.}
-            \resumeItem{Engineered an \textbf{Agentic AI} pipeline leveraging \textbf{OpenAI Tool Calling} (Function Calling) to securely map user intent to real-time \textbf{SQL} queries, enabling autonomous ticket price retrieval and dynamic updates.}
-            \resumeItem{Built an end-to-end multi-modal interface integrating \textbf{OpenAI Whisper (STT)}, \textbf{TTS}, and \textbf{Gradio} for seamless voice-to-voice interactions.}
+            \resumeItem{Architected a highly scalable \textbf{multi-agent system} featuring a \textbf{dual-LLM orchestration architecture} to dynamically route open-ended dialogue intent and normalize geographic entities for executing complex flight booking workflows.}
+            \resumeItem{Engineered an \textbf{Agentic AI} pipeline securely leveraging \textbf{OpenAI Tool Calling} to map conversational user intent precisely to real-time \textbf{SQL} database queries, enabling autonomous ticket price retrieval and immediate dynamic UI updates.}
+            \resumeItem{Built a complete end-to-end multi-modal conversational interface seamlessly integrating \textbf{OpenAI Whisper (STT)}, generalized \textbf{TTS} engines, and \textbf{Gradio} frontends to deploy entirely hands-free voice-to-voice interactive application flows.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{\href{https://github.com/mutyaladevi17/smart-audio-scribe}{Smart Audio Scribe}} $|$ \emph{OpenAI Whisper, Pyannote, Meta Llama, Hugging Face, PyTorch}}{Feb. 2026}
+          {\textbf{\href{https://github.com/mutyaladevi17/smart-audio-scribe}{Smart Audio Scribe}} $|$ \emph{OpenAI Whisper, Pyannote, Meta Llama, Hugging Face, PyTorch}}{}
           \resumeItemListStart
-            \resumeItem{Architected an end-to-end \textbf{Speech-to-Text (STT)} pipeline leveraging \textbf{OpenAI Whisper} for high-accuracy transcription and \textbf{Pyannote} for precise \textbf{speaker diarization} of multi-speaker audio.}
-            \resumeItem{Engineered a \textbf{Generative AI} engine utilizing local \textbf{Meta Llama LLMs} via \textbf{Hugging Face Transformers} to autonomously parse transcripts and synthesize \textbf{context-aware meeting minutes} and action items.}
-          \resumeItemListEnd
-
-        \resumeProjectHeading
-          {\textbf{\href{https://github.com/mutyaladevi17/AI-financial-news-engine}{AI Financial News Engine}} $|$ \emph{GPT-4o, GPT-5-nano, BeautifulSoup, Python, Requests}}{Jan. 2026}
-          \resumeItemListStart
-            \resumeItem{Engineered an intelligent financial data pipeline utilizing \textbf{GPT-5-nano} to autonomously classify and filter the most relevant market news from web-scraped (\textbf{BeautifulSoup}) Yahoo Finance pages.}
-            \resumeItem{Integrated \textbf{GPT-4o} to synthesize extracted content into professional, structured \textbf{stock news summaries}, managing high-volume data extraction with robust error handling for real-time market insights.}
+            \resumeItem{Architected an end-to-end \textbf{Speech-to-Text (STT)} integration pipeline comprehensively leveraging \textbf{OpenAI Whisper} for high-fidelity transcription alongside \textbf{Pyannote} for precise \textbf{speaker diarization} of complex multi-speaker audio recordings.}
+            \resumeItem{Engineered a complete \textbf{Generative AI} engine operating purely on local \textbf{Meta Llama LLMs} via \textbf{Hugging Face Transformers} to securely and autonomously parse raw transcripts and synthesize structured \textbf{context-aware meeting minutes}.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{\href{https://github.com/mutyaladevi17/website-summarizer}{Website Summarizer}} $|$ \emph{Ollama (Llama 3.1, Phi-3), OpenAI SDK, BeautifulSoup, Python}}{Dec. 2025}
+          {\textbf{\href{https://github.com/mutyaladevi17/AI-financial-news-engine}{AI Financial News Engine}} $|$ \emph{GPT-4o, GPT-5-nano, BeautifulSoup, Python, Requests}}{}
           \resumeItemListStart
-            \resumeItem{Developed a standalone, privacy-focused text extraction utility that leverages \textbf{local Ollama models} to perform serverless webpage summarization without external API calls.}
-            \resumeItem{Implemented a robust parsing engine using \textbf{BeautifulSoup} and \textbf{lxml} to clean and strip noise (scripts/styles) from web content, delivering high-fidelity markdown-formatted summaries directly in notebooks.}
+            \resumeItem{Engineered a rapid intelligent financial data pipeline utilizing \textbf{GPT-5-nano} to continuously and autonomously classify, filter, and extract the most objectively relevant market news from heavily web-scraped (\textbf{BeautifulSoup}) Yahoo Finance web page.}
+      %       \resumeItem{Integrated advanced \textbf{GPT-4o} LLM agents to automatically synthesize unstructured extracted content directly into professional, highly structured \textbf{stock news summaries}, managing high-volume enterprise data extraction alongside robust error handling.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{\href{https://github.com/mutyaladevi17/find_common_object}{Find Common Object (Explainable AI / ProtoPNet)}} $|$ \emph{PyTorch, torchvision, CNN, Matplotlib}}{Jan. 2026}
+          {\textbf{\href{https://github.com/mutyaladevi17/find_common_object}{Find Common Object (Explainable AI / ProtoPNet)}} $|$ \emph{PyTorch, torchvision, CNN, Matplotlib}}{}
           \resumeItemListStart
-            \resumeItem{Developed a CNN-based \textbf{Explainable AI} model implementing Prototypical Part Networks (\textbf{ProtoPNet}) to automatically discover and localize common sub-objects across image classes.}
-            \resumeItem{Designed models that learn human-interpretable image prototypes rather than black-box embeddings, providing spatial localization through \textbf{bounding boxes, heatmaps,} and matched prototype visualizations.}
+            \resumeItem{Developed a convolutional neural network (\textbf{CNN}) \textbf{Explainable AI} model implementing Prototypical Part Networks (\textbf{ProtoPNet}) to discover, isolate, and precisely localize common sub-objects across visual datasets.}
+            \resumeItem{Designed sophisticated deep learning models that inherently learn human-interpretable image structural prototypes rather than black-box embeddings, visually providing spatial localization strictly through \textbf{bounding boxes} and rich \textbf{heatmaps}.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
+   % \resumeProjectHeading
+   %    {\textbf{\href{https://github.com/mutyaladevi17/AI-financial-news-engine}{AI Financial News Engine}} $|$ \emph{GPT-4o, GPT-5-nano, BeautifulSoup, Python, Requests}}{}
+   %    \resumeItemListStart
+   %      \resumeItem{Engineered a rapid intelligent financial data pipeline utilizing \textbf{GPT-5-nano} to continuously and autonomously classify, filter, and extract the most objectively relevant market news from heavily web-scraped (\textbf{BeautifulSoup}) Yahoo Finance web pages.}
+   %      \resumeItem{Integrated advanced \textbf{GPT-4o} LLM agents to automatically synthesize unstructured extracted content directly into professional, highly structured \textbf{stock news summaries}, managing high-volume enterprise data extraction alongside robust error handling.}
+   %    \resumeItemListEnd
 
 %-----------RESEARCH & ENGINEERING EXPERIENCE-----------
 \section{Engineering \& Research Experience}
@@ -205,7 +213,8 @@
       {Department of Aerospace Engineering}{Chennai, India}
       \resumeItemListStart
         \resumeItem{Executed \textbf{Large-Eddy Simulations (LES)} of high Reynolds number channel flows with non-equilibrium effects.}
-        \resumeItem{Implemented \textbf{wall-modeled LES (wall stress model)} and sensor-based computations for accurate transition flow modeling into high-fidelity \textbf{in-house CFD solvers}.}
+        \resumeItem{Implemented \textbf{wall-modeled LES (wall stress model)} for non-equilibrium flows and sensor-based computations for accurate transition flow modeling into high-fidelity \textbf{in-house CFD solvers}.}
+
       \resumeItemListEnd
 
     \resumeSubheading

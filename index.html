@@ -544,8 +544,9 @@
             <strong>Computer Vision</strong>.
         </p>
         <p>
-            My work spans from developing <strong>multi-modal speech assistants</strong> and <strong>autonomous agentic
-                pipelines</strong> to engineering <strong>explainable AI (XAI)</strong> models for complex engineering
+            My work spans from developing <strong>multi-modal speech assistants</strong>, <strong>autonomous agentic
+                pipelines</strong>, and advanced <strong>Retrieval-Augmented Generation (RAG)</strong> systems to
+            engineering <strong>explainable AI (XAI)</strong> models for complex engineering
             layouts. I enjoy architecting end-to-end ML solutions that bridge the gap between advanced research and
             scalable production.
         </p>
@@ -559,6 +560,50 @@
             information.</p>
 
         <div class="projects">
+
+            <!-- ═══ Advanced RAG ═══ -->
+            <div class="card">
+                <h3>Advanced RAG System</h3>
+                <p class="desc">
+                    A highly sophisticated custom Retrieval-Augmented Generation pipeline. Bypasses native framework
+                    abstractions to implement intelligent semantic document segmentation, query rewriting, multi-query
+                    retrieval, and LLM-powered context reranking for superior accuracy.
+                </p>
+                <div class="tech">
+                    <span>OpenAI API</span>
+                    <span>Litellm</span>
+                    <span>ChromaDB</span>
+                    <span>Python</span>
+                    <span>Gradio</span>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/mutyaladevi17/RAG-advancedRetrevial" target="_blank"
+                        rel="noopener noreferrer">GitHub →</a>
+                    <button class="btn-details" onclick="openModal('modal-adv-rag')">More Details</button>
+                </div>
+            </div>
+
+            <!-- ═══ LangChain RAG ═══ -->
+            <div class="card">
+                <h3>LangChain RAG Baseline</h3>
+                <p class="desc">
+                    A robust baseline RAG architecture orchestrated with LangChain and ChromaDB. Implements standard
+                    document loading, dense embedding generation, approximate nearest neighbor vector retrieval, and
+                    contextual text generation via Gradio interfaces.
+                </p>
+                <div class="tech">
+                    <span>LangChain</span>
+                    <span>OpenAI API</span>
+                    <span>ChromaDB</span>
+                    <span>Python</span>
+                    <span>Gradio</span>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/mutyaladevi17/RAG-LangChain" target="_blank"
+                        rel="noopener noreferrer">GitHub →</a>
+                    <button class="btn-details" onclick="openModal('modal-langchain-rag')">More Details</button>
+                </div>
+            </div>
 
             <!-- ═══ Airline AI Chat Agent ═══ -->
             <div class="card">
@@ -678,7 +723,8 @@
                 </div>
 
                 <div class="card-actions">
-                    <a href="https://github.com/mutyaladevi17/AI-financial-news-engine" target="_blank" rel="noopener noreferrer">GitHub
+                    <a href="https://github.com/mutyaladevi17/AI-financial-news-engine" target="_blank"
+                        rel="noopener noreferrer">GitHub
                         →</a>
                     <button class="btn-details" onclick="openModal('modal-stock')">More Details</button>
                 </div>
@@ -707,7 +753,8 @@
                 </div>
 
                 <div class="card-actions">
-                    <a href="https://github.com/mutyaladevi17/website-summarizer" target="_blank" rel="noopener noreferrer">GitHub
+                    <a href="https://github.com/mutyaladevi17/website-summarizer" target="_blank"
+                        rel="noopener noreferrer">GitHub
                         →</a>
                     <button class="btn-details" onclick="openModal('modal-websumm')">More Details</button>
                 </div>
@@ -770,9 +817,12 @@
             <div class="skill">Gradio</div>
             <div class="skill">Ollama</div>
             <div class="skill">Fine-tuning / LoRA</div>
-            <div class="skill">Prompt Engineering</div>
             <div class="skill">Web Scraping</div>
             <div class="skill">Git</div>
+            <div class="skill">LangChain</div>
+            <div class="skill">Litellm</div>
+            <div class="skill">ChromaDB</div>
+            <div class="skill">RAG</div>
 
         </div>
 
@@ -803,6 +853,92 @@
     <!-- ═══════════════════════════════════════════════════════
      MODAL POPUPS
      ═══════════════════════════════════════════════════════ -->
+
+    <!-- ── Advanced RAG Modal ───────────────────────────── -->
+    <div class="modal-overlay" id="modal-adv-rag">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Advanced RAG System</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>Overview</h4>
+                <p>A custom-built, advanced Retrieval-Augmented Generation pipeline focusing on maximizing context
+                    retrieval metrics through highly sophisticated ingestion and retrieval techniques. Built directly on
+                    OpenAI SDK and Litellm.</p>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Semantic Document Segmentation</strong> — Avoids arbitrary text splitting by using an
+                        LLM to smartly chunk documents based on semantic boundaries.</li>
+                    <li><strong>LLM-Generated Summaries</strong> — Enriches standard document chunks by dynamically
+                        generating a targeted headline and summary for every chunk prior to vectorization.</li>
+                    <li><strong>Query Rewriting & Multi-Query</strong> — Utilizes an LLM to analyze conversational
+                        history, rewriting queries for concurrent, merged multi-query vector searches.</li>
+                    <li><strong>LLM-Based Reranking</strong> — Dynamically reorders retrieved chunks prior to generation
+                        by prompting an LLM to rank chunks strictly by contextual relevance.</li>
+                </ul>
+
+                <h4>Evaluation Results vs Baseline</h4>
+                <p>An automated LLM-as-a-judge framework revealed substantial improvements over standard RAG
+                    architectures:</p>
+                <ul>
+                    <li><strong>Mean Reciprocal Rank (MRR):</strong> Improved from 0.85 (Baseline) to
+                        <strong>0.88</strong>
+                    </li>
+                    <li><strong>Keyword Coverage:</strong> Increased from 92% to a massive <strong>95.5%</strong></li>
+                    <li><strong>Answer Accuracy:</strong> Reached <strong>4.51/5</strong></li>
+                </ul>
+
+                <h4>Technologies</h4>
+                <div class="modal-tech">
+                    <span>OpenAI
+                        SDK</span><span>Litellm</span><span>ChromaDB</span><span>Python</span><span>Gradio</span><span>Tenacity</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── LangChain RAG Modal ──────────────────────────── -->
+    <div class="modal-overlay" id="modal-langchain-rag">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>LangChain RAG Baseline</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>Overview</h4>
+                <p>A structured standard RAG pipeline built with LangChain, ChromaDB, and OpenAI, providing a
+                    conversational interface and a robust methodology for testing varying document chunking strategies.
+                </p>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>LangChain Integration</strong> — Leverages the LangChain framework for seamlessly
+                        orchestrating retrieval streams and conversational generation pipelines.</li>
+                    <li><strong>Chunking Strategy Comparison</strong> — Infrastructure built to toggle between three
+                        different vector store configurations (Small, Large, Hybrid) to identify optimal retrieval
+                        density.</li>
+                    <li><strong>Persistent Vector Storage</strong> — Uses ChromaDB collections to persistently store and
+                        rapidly retrieve dense document embeddings locally.</li>
+                    <li><strong>Interactive Chat</strong> — Features a Gradio-powered web interface for real-time
+                        querying against the document corpus.</li>
+                </ul>
+
+                <h4>Pipeline Flow</h4>
+                <div class="flow-step">1. Document Loading & Splitting natively.</div>
+                <div class="flow-step">2. Embedding Generation via text-embedding-3-large.</div>
+                <div class="flow-step">3. Vector Retrieval using Approximate Nearest Neighbors.</div>
+                <div class="flow-step">4. Context Construction & Generation via gpt-4.1-nano.</div>
+
+                <h4>Technologies</h4>
+                <div class="modal-tech">
+                    <span>LangChain</span><span>OpenAI
+                        API</span><span>ChromaDB</span><span>Python</span><span>Gradio</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ── Airline AI Chat Agent ───────────────────────────── -->
     <div class="modal-overlay" id="modal-airline">
